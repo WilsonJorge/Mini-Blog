@@ -9,10 +9,11 @@ const dbUser = process.env.DB_USER;
 const conn=async () =>{
     try {
          const dbConn =await mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.ielahyq.mongodb.net/retryWrites=true&w=majority`);
-         console.log("conectou ao Banco");
+         console.log("Banco de Dados Conectadado com sucesso!");
          return dbConn;
     } catch (error) {
         console.log(error);
+
     }
 }
 conn();
